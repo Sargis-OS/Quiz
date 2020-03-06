@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <script></script>
+  <body class="body-class">
+    <div class="main-container">
+      <!--jumbotron instructions-->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-6">Fun facts: Test Your Knowledge</h1>
+          <p class="lead">How much do you know? Take the quiz to find out.</p>
+          <p>
+            Your score will be based on your time and the number of answers you
+            got correct.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row font-sizing">
+          <div class="card card-style" style="width: 50rem;">
+            <div class="card-body">
+              <!--quiz div-->
+              <div id="display">
+                <div id="timer" class="badge badge-primary"></div>
+                <div id="score" class="badge badge-danger"></div>
+                <!--start quiz button/div-->
+                <span id="startTime" class="badge badge-primary"></span>
+                <div id="starter">
+                  <button class="badge badge-success card-style" id="startQuiz">
+                    Start quiz
+                  </button>
+                </div>
+                <!--replace with quiz questions-->
+
+                <!-- question -->
+                <div id="question"></div>
+
+                <!-- choices -->
+                <div id="choices" class="choices"></div>
+
+                <!-- next question -->
+                <button
+                  id="questionBtn"
+                  class="badge badge-light card-style"
+                ></button>
+                <button id="finishBtn"></button>
+              </div>
+              <!--show final scores and high-->
+              <div id="showScore" class="final-score">
+                <span
+                  >You got
+                  <span
+                    class="badge badge-danger"
+                    id="finalNumberCorrect"
+                  ></span>
+                  correct.</span
+                >
+                <span class="badge badge-dark score-display">
+                  Your score: <span id="finalScore"></span
+                ></span>
+                <br />
+                <form id="userName" method="POST">
+                  <input
+                    id="scoreInput"
+                    type="text"
+                    placeholder="Add your name"
+                    name="todo-text"
+                  />
+                </form>
+                <button id="saveBtn" class="btn btn-success score-display">
+                  Save
+                </button>
+                <div>
+                  <p>High scores:</p>
+                  <ul id="highScores"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- db -->
+  <script src="./questions.js"></script>
+  <!-- logic -->
+  <script src="./app.js"></script>
+  <script src="./end.js"></script>
+</html>
